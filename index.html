@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator - Mayur Nagrare</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+
+        <div class="input-group">
+            <label for="qrText">Enter Text or URL:</label>
+            <input type="text" id="qrText" placeholder="e.g., Hello World or https://www.example.com">
+        </div>
+
+        <div class="options-group">
+            <label for="size">Size (pixels):</label>
+            <input type="number" id="size" value="250" min="50" max="1000">
+            
+            <label for="bgColor">Background Color:</label>
+            <input type="color" id="bgColor" value="#ffffff">
+            
+            <label for="fgColor">Foreground Color:</label>
+            <input type="color" id="fgColor" value="#000000">
+        </div>
+
+        <button id="generateBtn">Generate QR Code</button>
+
+        <div class="qr-output">
+            <canvas id="qrCanvas"></canvas>
+            <p id="qrMessage"></p>
+            <button id="downloadBtn" style="display:none;">Download QR Code</button>
+        </div>
+    </div>
+
+    <footer>
+        Created by Mayur Nagrare
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
